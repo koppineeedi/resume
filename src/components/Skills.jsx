@@ -18,6 +18,7 @@ const SKILL_CATEGORIES = [
     borderColor: 'rgba(139,92,246,0.2)',
     skills: [
       { name: 'Node.js', icon: '🟢' },
+      { name: 'Spring Boot', icon: '🍃' },
     ],
   },
   {
@@ -27,6 +28,7 @@ const SKILL_CATEGORIES = [
     borderColor: 'rgba(6,182,212,0.2)',
     skills: [
       { name: 'SQL', icon: '🗄️' },
+      { name: 'Firebase', icon: '🔥' },
     ],
   },
   {
@@ -38,6 +40,17 @@ const SKILL_CATEGORIES = [
       { name: 'Java', icon: '☕' },
       { name: 'C', icon: '💻' },
       { name: 'Python', icon: '🐍' },
+    ],
+  },
+  {
+    title: 'Tools & Platforms',
+    color: '#10b981',
+    bgColor: 'rgba(16,185,129,0.08)',
+    borderColor: 'rgba(16,185,129,0.2)',
+    skills: [
+      { name: 'Git & GitHub', icon: '🐙' },
+      { name: 'Postman', icon: '📮' },
+      { name: 'AWS Basics', icon: '☁️' },
     ],
   },
 ]
@@ -109,7 +122,7 @@ export default function Skills() {
         </div>
 
         {/* Skills grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
           {SKILL_CATEGORIES.map(cat => (
             <CategoryBlock key={cat.title} {...cat} />
           ))}
